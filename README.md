@@ -80,7 +80,7 @@ Aula 10    → Pipeline end-to-end completo
 
 ## Pré-requisitos
 
-- Python 3.13+
+- Python 3.11
 - Docker instalado e rodando
 - Git e conta no GitHub
 - Conta no Docker Hub (necessário a partir da Aula 7)
