@@ -16,7 +16,7 @@
      width="80"
      height="80"/>
 
-![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
 
@@ -36,8 +36,8 @@ Curso prático que conduz o aluno desde a organização de um projeto de ML até
 
 | Aula | Tema | Entrega |
 |------|------|---------|
-| 01 | [Setup do projeto de ML](./modulo1/) | Repositório base funcional |
-| 02 | Containerizando o projeto | Projeto rodando em container |
+| 01 | [Setup do projeto de ML](./modulo1/) | Repositório base funcional, projeto rodando localmente |
+| 02 | [Containerizando o projeto](./modulo2/) | Projeto rodando em container |
 | 03 | Separando treino e inferência | Dois containers com responsabilidades claras |
 | 04 | Otimização de imagens para ML | Imagens menores e mais rápidas |
 | 05 | Gerando e versionando artefatos de modelo | Modelo versionado fora da imagem |
@@ -51,12 +51,18 @@ Curso prático que conduz o aluno desde a organização de um projeto de ML até
 
 ## Case do Curso
 
-O projeto de ML usado ao longo do curso é um **classificador de qualidade de vinho** (Wine Quality) com `scikit-learn`. A escolha foi intencional:
+O projeto de ML usado ao longo do curso é um **modelo de monitoramento de trocador de calor** com `scikit-learn`. A escolha foi intencional:
 
-- Dataset leve, sem download externo (disponível via `sklearn.datasets`)
-- Problema de classificação multi-classe realista
+- Dataset leve, com dados reais de sensores industriais (175 registros diários)
+- Problema de regressão com tendência temporal clara
 - Fácil de entender, mas com estrutura de código similar à produção
 - Permite demonstrar todos os conceitos de Docker sem distração de complexidade de dados
+
+### O problema
+
+Modelar a **degradação da eficiência térmica** ao longo do tempo (~-0.018% por dia), com duas capacidades de inferência:
+1. Dado uma **data** → prever a eficiência esperada
+2. Dado um **valor de eficiência** → encontrar as datas históricas mais próximas
 
 ---
 
@@ -74,7 +80,7 @@ Aula 10    → Pipeline end-to-end completo
 
 ## Pré-requisitos
 
-- Python 3.10+
+- Python 3.13+
 - Docker instalado e rodando
 - Git e conta no GitHub
 - Conta no Docker Hub (necessário a partir da Aula 7)
