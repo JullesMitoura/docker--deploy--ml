@@ -34,7 +34,7 @@ Curso prático que conduz o aluno desde a organização de um projeto de ML até
 
 ## Estrutura do Curso
 
-| Aula | Tema | Resumo | Entrega |
+| Modulo | Tema | Resumo | Entrega |
 |------|------|--------|---------|
 | 01 | [Setup do Projeto de ML](./modulo1/) | Estrutura do projeto, script de treino e inferência rodando localmente | Repositório base funcional, projeto rodando localmente |
 | 02 | [Containerizando o Projeto](./modulo2/) | Primeiro Dockerfile, instalação de dependências e execução do treino em container | Projeto rodando em container |
